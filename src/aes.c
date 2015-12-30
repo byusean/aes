@@ -87,5 +87,30 @@ void subBytes(char* field)
 
 void shiftRows(char* field)
 {
+	//second row
+	char temp = field[1];
+	field[1] = field[5];
+	field[5] = field[9];
+	field[9] = field[13];
+	field[13] = temp;
+
+	//third row
+	temp = field[2];
+	field[2] = field[10];
+	field[10] = temp;
+	temp = field[6];
+	field[6] = field[14];
+	field[14] = temp;
+
+	//fourth row
+	temp = field[3];
+	field[3] = field[15];
+	field[15] = field[11];
+	field[11] = field[7];
+	field[7] = temp;
+}
+
+void mixColumns(char* field)
+{
 
 }
